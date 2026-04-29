@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SobatSosmed | Jasa Kelola Media Sosial UMKM Jateng</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Config for Teal, Sage, Green Theme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: {
+                            50: '#F4F7F4',
+                            100: '#E4EBE4',
+                            200: '#C9D8C9',
+                            300: '#A1BEA1',
+                            400: '#759E75',
+                            500: '#548254', // Main Sage
+                            600: '#416641',
+                            700: '#345134',
+                            800: '#2B422B',
+                            900: '#233623',
+                        },
+                        brandTeal: {
+                            500: '#14b8a6', // Tailwind Teal 500
+                            600: '#0d9488', // Tailwind Teal 600
+                            700: '#0f766e', // Tailwind Teal 700
+                            900: '#134e4a', // Tailwind Teal 900
+                        },
+                        brandGreen: {
+                            500: '#22c55e', // Tailwind Green 500
+                            600: '#16a34a', // Tailwind Green 600
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        html { scroll-behavior: smooth; }
+    </style>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-sage-50 text-gray-800 antialiased selection:bg-brandTeal-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-sage-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="bg-brandTeal-600 p-2.5 rounded-xl shadow-lg shadow-brandTeal-500/30">
+                        <i data-lucide="sprout" class="text-white w-6 h-6"></i>
+                    </div>
+                    <span class="text-2xl font-extrabold tracking-tight text-brandTeal-900">
+                        Sobat<span class="text-sage-500">Sosmed</span>
+                    </span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 text-sm font-semibold text-sage-800">
+                    <a href="#masalah" class="hover:text-brandTeal-600 transition">Masalah UMKM</a>
+                    <a href="#solusi" class="hover:text-brandTeal-600 transition">Solusi Kami</a>
+                    <a href="#harga" class="hover:text-brandTeal-600 transition">Harga Paket</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <a href="#kontak" class="hidden md:inline-flex items-center justify-center bg-brandTeal-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-brandTeal-700 transition shadow-lg shadow-brandTeal-600/30 gap-2">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i> Konsultasi Gratis
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-sage-800 p-2" id="mobile-menu-btn">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Abstract Background -->
+        <div class="absolute inset-0 -z-10 bg-sage-50">
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brandTeal-100/50 blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-sage-200/50 blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center gap-2 bg-sage-100 text-sage-700 border border-sage-200 px-5 py-2 rounded-full text-sm font-semibold mb-8 shadow-sm">
+                <i data-lucide="map-pin" class="w-4 h-4 text-brandGreen-600"></i>
+                Khusus UMKM Wilayah Jawa Tengah
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold text-gray-900 leading-tight mb-6 tracking-tight">
+                Bikin UMKM Jenengan <br class="hidden md:block" />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandTeal-600 to-sage-500">Makin Kondang</span> & Banjir Orderan
+            </h1>
+            
+            <p class="text-lg md:text-xl text-sage-700 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Mboten usah pusing mikir konten atau admin. Serahkan sosmed ke tim kami, Jenengan fokus produksi saja. Jasa profesional, visual estetik, dan harga seduluran.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#harga" class="w-full sm:w-auto bg-brandTeal-600 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-brandTeal-700 hover:-translate-y-1 transition duration-300 shadow-xl shadow-brandTeal-600/30 flex items-center justify-center gap-2">
+                    Lihat Paket Harga <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="#masalah" class="w-full sm:w-auto bg-white text-sage-800 border-2 border-sage-200 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-sage-50 hover:border-sage-300 transition duration-300 flex items-center justify-center">
+                    Pelajari Dulu
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section id="masalah" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-brandTeal-600 font-bold tracking-wide uppercase text-sm mb-2">Masalah Umum</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Sering Ngalamin Masalah Iki?</h3>
+                <div class="w-24 h-1.5 bg-sage-300 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-sage-50 p-8 rounded-3xl border border-sage-100 hover:border-brandTeal-300 hover:shadow-xl hover:shadow-sage-200/50 transition duration-300 group">
+                    <div class="bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition duration-300">
+                        <i data-lucide="clock-alert" class="w-7 h-7 text-sage-500"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Gak Sempat Posting</h4>
+                    <p class="text-sage-700 leading-relaxed">Sibuk ngurus operasional, produksi, dan kiriman sampai gak ada waktu buat riset hashtag atau jadwal posting rutin.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-sage-50 p-8 rounded-3xl border border-sage-100 hover:border-brandTeal-300 hover:shadow-xl hover:shadow-sage-200/50 transition duration-300 group">
+                    <div class="bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition duration-300">
+                        <i data-lucide="image-off" class="w-7 h-7 text-brandTeal-500"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Visual Kurang Menarik</h4>
+                    <p class="text-sage-700 leading-relaxed">Foto produk cuma pakai HP seadanya. Kalah saing sama kompetitor yang feed Instagram dan TikTok-nya udah estetik.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-sage-50 p-8 rounded-3xl border border-sage-100 hover:border-brandTeal-300 hover:shadow-xl hover:shadow-sage-200/50 transition duration-300 group">
+                    <div class="bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition duration-300">
+                        <i data-lucide="trending-down" class="w-7 h-7 text-brandGreen-500"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Follower Mentok</h4>
+                    <p class="text-sage-700 leading-relaxed">Pusing nulis caption. Sudah rajin posting tapi yang like cuma teman sendiri, dan konversi penjualan nggak naik-naik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions / Services -->
+    <section id="solusi" class="py-24 bg-brandTeal-900 text-white overflow-hidden relative">
+        <!-- Background accents -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-brandTeal-800/50 transform -skew-x-12 translate-x-32 z-0 hidden lg:block"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-brandGreen-400 font-bold tracking-wide uppercase text-sm mb-2">Solusi Kami</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold mb-6 leading-tight">
+                        Fokus Kami: Bikin Brand Jenengan Tampil <span class="text-brandGreen-400">Merakyat Tapi Profesional</span>
+                    </h3>
+                    <p class="text-brandTeal-100 text-lg mb-10 leading-relaxed">
+                        Kami adalah agensi lokal yang paham betul karakter konsumen di Jawa Tengah. Kami mengutamakan kepercayaan (amanah) dan pertumbuhan nyata, bukan cuma janji manis bot follower.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brandTeal-800 p-2 rounded-lg mt-1 text-brandGreen-400">
+                                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">Konten Visual Menawan</h5>
+                                <p class="text-brandTeal-200/80 text-sm mt-1">Sesi foto/video langsung ke lokasi usaha Anda (Area Jateng).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brandTeal-800 p-2 rounded-lg mt-1 text-brandGreen-400">
+                                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">Copywriting "Njawani" & Persuasif</h5>
+                                <p class="text-brandTeal-200/80 text-sm mt-1">Gaya bahasa yang relevan dengan target pasar lokal Anda.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brandTeal-800 p-2 rounded-lg mt-1 text-brandGreen-400">
+                                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">Laporan Transparan</h5>
+                                <p class="text-brandTeal-200/80 text-sm mt-1">Kami laporkan kenaikan interaksi dengan bahasa yang mudah dipahami.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-sage-100 rounded-3xl p-8 relative overflow-hidden shadow-2xl">
+                        <!-- Decor -->
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-sage-300 rounded-full blur-3xl opacity-50"></div>
+                        <div class="absolute bottom-0 left-0 w-32 h-32 bg-brandTeal-300 rounded-full blur-3xl opacity-50"></div>
+                        
+                        <div class="grid grid-cols-2 gap-4 relative z-10">
+                            <div class="bg-white p-6 rounded-2xl shadow-sm text-center transform translate-y-4">
+                                <i data-lucide="camera" class="w-10 h-10 mx-auto mb-3 text-brandTeal-600"></i>
+                                <span class="font-bold text-gray-900 text-sm">Foto Produk</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl shadow-sm text-center transform -translate-y-4">
+                                <i data-lucide="clapperboard" class="w-10 h-10 mx-auto mb-3 text-sage-500"></i>
+                                <span class="font-bold text-gray-900 text-sm">Video Reels/TikTok</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl shadow-sm text-center transform translate-y-4">
+                                <i data-lucide="pen-tool" class="w-10 h-10 mx-auto mb-3 text-brandGreen-500"></i>
+                                <span class="font-bold text-gray-900 text-sm">Desain & Caption</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl shadow-sm text-center transform -translate-y-4">
+                                <i data-lucide="pie-chart" class="w-10 h-10 mx-auto mb-3 text-brandTeal-600"></i>
+                                <span class="font-bold text-gray-900 text-sm">Analisa Akun</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="harga" class="py-24 bg-sage-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-brandTeal-600 font-bold tracking-wide uppercase text-sm mb-2">Investasi Sosial Media</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Harga Seduluran, Hasil Maksimal</h3>
+                <p class="text-sage-700 max-w-2xl mx-auto">Pilih paket yang paling pas dengan kondisi usaha Anda. Transparan, tanpa biaya tersembunyi.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 items-center">
+                <!-- Paket Sedulur -->
+                <div class="bg-white p-8 rounded-3xl border border-sage-200 shadow-sm hover:shadow-xl hover:border-brandTeal-300 transition duration-300">
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Paket Sedulur</h4>
+                    <p class="text-sage-600 text-sm mb-6 h-10">Cocok untuk usaha mikro yang baru mau go-digital.</p>
+                    <div class="flex items-baseline gap-1 mb-6 border-b border-sage-100 pb-6">
+                        <span class="text-4xl font-extrabold text-brandTeal-700">Rp 499rb</span>
+                        <span class="text-sage-500 font-medium">/bln</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brandGreen-500 shrink-0"></i> <span class="text-sage-700 text-sm">12 Konten Feed/Reels</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brandGreen-500 shrink-0"></i> <span class="text-sage-700 text-sm">Copywriting & Hashtag</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brandGreen-500 shrink-0"></i> <span class="text-sage-700 text-sm">1x Kunjungan Foto/Video</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brandGreen-500 shrink-0"></i> <span class="text-sage-700 text-sm">Laporan Bulanan Dasar</span></li>
+                    </ul>
+                    <a href="#" class="block w-full text-center bg-sage-100 text-brandTeal-700 font-bold py-3.5 rounded-xl hover:bg-sage-200 transition">Pilih Paket</a>
+                </div>
+
+                <!-- Paket Juragan (Highlighted) -->
+                <div class="bg-gradient-to-b from-brandTeal-600 to-brandTeal-800 p-8 rounded-3xl border border-brandTeal-500 shadow-2xl shadow-brandTeal-600/40 transform md:-translate-y-4 relative">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brandGreen-400 text-brandTeal-900 text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
+                        Paling Laris
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Paket Juragan</h4>
+                    <p class="text-brandTeal-100 text-sm mb-6 h-10">Paling favorit untuk UMKM yang ingin tumbuh pesat.</p>
+                    <div class="flex items-baseline gap-1 mb-6 border-b border-brandTeal-500 pb-6">
+                        <span class="text-4xl font-extrabold text-white">Rp 999rb</span>
+                        <span class="text-brandTeal-200 font-medium">/bln</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brandGreen-400 shrink-0"></i> <span class="text-white text-sm">20 Konten (Feed + Reels)</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brandGreen-400 shrink-0"></i> <span class="text-white text-sm">Admin Balas DM & Komen</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brandGreen-400 shrink-0"></i> <span class="text-white text-sm">2x Kunjungan Foto/Video</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brandGreen-400 shrink-0"></i> <span class="text-white text-sm">Setup Iklan (FB/IG Ads) Dasar</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brandGreen-400 shrink-0"></i> <span class="text-white text-sm">Laporan Analisa Detail</span></li>
+                    </ul>
+                    <a href="#" class="block w-full text-center bg-brandGreen-500 text-white font-bold py-3.5 rounded-xl hover:bg-brandGreen-600 transition shadow-lg shadow-brandGreen-500/30">Pilih Paket</a>
+                </div>
+
+                <!-- Paket Sultan -->
+                <div class="bg-white p-8 rounded-3xl border border-sage-200 shadow-sm hover:shadow-xl hover:border-brandTeal-300 transition duration-300">
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Paket Sultan</h4>
+                    <p class="text-sage-600 text-sm mb-6 h-10">Solusi autopilot total. Jenengan terima beres.</p>
+                    <div class="flex items-baseline gap-1 mb-6 border-b border-sage-100 pb-6">
+                        <span class="text-4xl font-extrabold text-brandTeal-700">Rp 1.9jt</span>
+                        <span class="text-sage-500 font-medium">/bln</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brandGreen-500 shrink-0"></i> <span class="text-sage-700 text-sm">Konten Harian (30 Konten)</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brandGreen-500 shrink-0"></i> <span class="text-sage-700 text-sm">Full Admin & Order Handling</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brandGreen-500 shrink-0"></i> <span class="text-sage-700 text-sm">Manajemen Iklan Profesional</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brandGreen-500 shrink-0"></i> <span class="text-sage-700 text-sm">Kunjungan Konten Tiap Minggu</span></li>
+                    </ul>
+                    <a href="#" class="block w-full text-center bg-sage-100 text-brandTeal-700 font-bold py-3.5 rounded-xl hover:bg-sage-200 transition">Pilih Paket</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="kontak" class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-brandTeal-600"></div>
+        <!-- Texture/Pattern Overlay -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10 text-white">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-6">Sampun Siap UMKM-e Maju Bareng?</h2>
+            <p class="text-brandTeal-100 mb-10 text-lg md:text-xl max-w-2xl mx-auto">
+                Jangan biarkan kompetitor merebut pelanggan Anda hanya karena tampilan sosmed yang kurang rapi. Mari diskusi santai via WhatsApp, gratis!
+            </p>
+            <a href="https://wa.me/628123456789" class="inline-flex items-center gap-3 bg-white text-brandTeal-700 px-8 py-4 rounded-full font-black text-lg hover:bg-sage-50 hover:scale-105 transition-all duration-300 shadow-2xl">
+                <i data-lucide="message-square" class="w-6 h-6 text-brandGreen-500"></i>
+                Chat WhatsApp Sekarang
+            </a>
+            <p class="mt-6 text-brandTeal-200 text-sm">Admin fast response (08:00 - 20:00 WIB)</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-sage-900 text-sage-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <i data-lucide="sprout" class="w-6 h-6 text-brandGreen-400"></i>
+                <span class="text-xl font-bold tracking-tight text-white">SobatSosmed</span>
+            </div>
+            
+            <p class="text-sm text-sage-400 text-center md:text-left">
+                &copy; 2024 SobatSosmed Jateng. Melayani dengan amanah untuk UMKM Jawa Tengah.
+            </p>
+            
+            <div class="flex gap-4">
+                <a href="#" class="w-10 h-10 rounded-full bg-sage-800 flex items-center justify-center hover:bg-brandTeal-600 hover:text-white transition">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-sage-800 flex items-center justify-center hover:bg-brandTeal-600 hover:text-white transition">
+                    <i data-lucide="facebook" class="w-5 h-5"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-sage-800 flex items-center justify-center hover:bg-brandTeal-600 hover:text-white transition">
+                    <i data-lucide="music-2" class="w-5 h-5"></i> <!-- Representing TikTok -->
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+
+        // Simple Mobile Menu Toggle Script
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        // You can expand this logic to show/hide a mobile menu container if needed
+        mobileMenuBtn.addEventListener('click', () => {
+            alert('Menu mobile akan muncul di sini. (Implementasi sidebar/dropdown)');
+        });
+    </script>
+</body>
+</html>
